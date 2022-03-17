@@ -1,0 +1,95 @@
+body {
+  background-image: url(../img/landback.png);
+  background-size: cover;
+}
+
+.shop {
+  cursor: not-allowed;
+}
+
+.main {
+  position: relative;
+  margin: 25vh auto;
+  width: 350px;
+  height: 250px;
+  padding: 20px 40px;
+  background-color: white;
+  border-radius: 5px;
+  z-index: 100;
+  box-shadow: #b1aeae 0px 0px 8px;
+}
+
+.main .land_top {
+  width: 160px;
+  position: absolute;
+  top: -35px;
+  left: 140px;
+}
+
+.main input {
+  margin-bottom: 8px;
+  width: 100%;
+  height: 30px;
+  border: none;
+  outline: none;
+  border-bottom: gainsboro solid 1px;
+  font-size: 13px;
+}
+
+.main .fade {
+  width: 20px;
+  height: 20px;
+  background-color: whitesmoke;
+  position: absolute;
+  top: 0px;
+  text-align: center;
+  border-radius: 100px;
+  color: gray;
+  right: 30px;
+}
+
+.main .fade:hover {
+  color: white;
+  background-color: #494848;
+}
+
+.main a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #65abec;
+}
+
+.main a:hover {
+  color: #3097f8;
+}
+
+.main button {
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 5px;
+  color: white;
+  font-size: 17px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  background-color: #65abec;
+}
+
+.main button:hover {
+  background-color: #3097f8;
+}
+
+.main #register_mail, .main #code_password {
+  width: 70%;
+}
+
+.main #passcode, .main #landcode {
+  margin: 0 0 0 10px;
+  width: 26%;
+  height: 30px;
+  font-size: 12px;
+}
+
+.main #to_code {
+  margin-left: 120px;
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后台管理系统</title>
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+<body>
+    <div id="top">
+        <div style="position: relative;">
+            <a target="_blank" href="https://blog.csdn.net/Azbtt?spm=1001.2014.3001.5343"><img class="page-icon" src="https://b3logfile.com/file/2021/11/csdn-79ab0852.png" alt="CSDN">CSDN</a>
+            <a target="_blank" href="https://blog.csdn.net/Azbtt?spm=1001.2014.3001.5343"><img class="page-icon" src="https://tse4-mm.cn.bing.net/th/id/OIP-C.oPNZYwIAkEK33lHUqEuqcgAAAA?w=179&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7" alt="Gitee">Gitee</a>
+            <a class="top_land" href="javascript:;">登录账号</a>
+            <a class="get_message" href="javascript:;"></a>
+            <div id="myPopup">个人中心</div>
+        </div>
+    </div>
+    <div id="body">
+        <div class="column">
+            <a href="javscript:;" style="font-size: 20px;" class="column_a"><i class="fa fa-cogs" aria-hidden="true"></i>餐厅系统</a>
+            <a href="javscript:;" class="column_a"><i  class="fa fa-user-o" aria-hidden="true"></i>个人中心</a>
+            <a href="javscript:;" class="column_a"><i  class="fa fa-steam-square" aria-hidden="true"></i>团队管理</a>
+            <a href="javscript:;" class="column_a"><i style="padding: 0 5px;" class="fa fa-cutlery" aria-hidden="true"></i>菜品管理</a>
+            <a href="javscript:;" class="column_a"><i style="padding: 0 5px;" class="fa fa-cart-plus" aria-hidden="true"></i>添加订单</a>
+        </div>
+        <div class="function">
+            <div class="functions" id="begin">
+                欢迎使用餐厅程序!
+            </div>
+            <div class="functions" id="me" style="display: none;">
+                <div class="me-show">
+                    <div id="ms-top">个人信息</div>
+                    <img class="head" src="img/head.jpg">
+                    <div class="message"><i class="fa fa-id-card-o" aria-hidden="true"></i>用户昵称:<span class="getmessage">未知</span></div>
+                    <div class="message"><i class="fa fa-user" aria-hidden="true"></i>性别：<span class="getmessage">未知</span></div>
+                    <div class="message"><i class="fa fa-user-circle-o" aria-hidden="true"></i>年龄：<span class="getmessage">未知</span></div>
+                    <div class="message"><i class="fa fa-phone" aria-hidden="true"></i>电话：<span class="getmessage">未知</span></div>
+                    <div class="message" style="height: 40px;display: none;"><span class="getmessage">未知</span></div>
+                </div>
+                <div class="me_revise">
+                    <div id="mr-top">个人资料</div>
+                    <div class="mr_b">
+                        <span>用户昵称:</span>
+                        <input type="text" class="mr_input" name="id" id="" placeholder="未知">
+                    </div>
+                    <div class="mr_b">
+                        <span >性别:</span>
+                        <input type="radio" class="sex" name="sex" value="男">男
+                        <input type="radio" class="sex" name="sex" value="女">女
+                    </div>
+                    <div class="mr_b">
+                        <span>年龄:</span>
+                        <input type="text" class="mr_input" name="id" id="" placeholder="未知">
+                    </div>
+                    <div class="mr_b">
+                        <span>电话号:</span>
+                        <input type="text" class="mr_input" name="id" id="" placeholder="未知">
+                    </div>
+                    <div class="mr_b" style="display: none;">
+                        <span>操作码:</span>
+                        <input type="text" class="mr_input" name="id" id="" placeholder="未知">
+                    </div>
+                    <button id="mr_b">保存信息</button>
+                    <a href="javascript:;" id="end_land">退出登录</a>
+                </div>
+            </div>
+            <div class="functions" id="team" style="display: none;">
+                <div class="team_fade">
+                    <button class="fade">×</button>
+                    <div id="register_main">
+                        <span style="color: #1890FF;font-size: 20px;font-weight: 500;">用户添加栏目</span>
+                        <div id="input_land">
+                            <input type="text" class="registerinput" placeholder="请输入您要添加的用户名">
+                            <input type="text" class="registerinput" placeholder="请输入您要添加的密码">
+                            <input type="text" class="registerinput" id="register_mail" placeholder="请输入您的邮箱"><button id="passcode_number">发送验证码</button>
+                            <input type="text" class="registerinput" placeholder="请输入您获取的验证码">
+                        </div>
+                        <button id="add_number">添加</button>
+                    </div>
+                </div>
+                <div class="team_fade">
+                    <button class="fade">×</button>
+                    <div id="team_revise">
+                        <span style="color: #1890FF;font-size: 20px;font-weight: 500;">用户修改栏目</span>
+                        <div id="input_land">
+                            用户名：<input type="text" class="team_reivse_input" placeholder="请输入您要修改的ID"></br>
+                            年龄：<input style="margin-left: 14px;" type="text" class="team_reivse_input" placeholder="请输入您要修改的年龄"></br>
+                            性别：<input type="radio" class="team_sex" name="team_sex" value="男">男
+                            <input type="radio" class="team_sex" name="team_sex" value="女">女
+                        </div>
+                        <button id="team_revise_b">修改</button>
+                    </div>
+                </div>
+                <div class="team_top">
+                    <button class="team_t_b" id="team_add"><i class="fa fa-plus-square-o" aria-hidden="true"></i>添加用户</button>
+                    <button class="team_t_b" id="team_delete"><i class="fa fa-minus-square-o" aria-hidden="true"></i>批量删除</button>
+                    <div>
+                        <input type="text" class="team_find_input" placeholder=" 请输入您要寻找的用户名">
+                        <a href="javascript:;" class="team_find_bon" onclick="teamfind()"><i class="fa fa-search" aria-hidden="true"></i>搜索</a>
+                    </div>
+                </div>
+                <table class="team_main">
+                    <!-- <thead> 
+                    <tr class="tmt">
+                        <th class="ms"><input type="checkbox" onchange="s()" name="team_all" value="all"></th>
+                        <th class="ms">用户名</th>
+                        <th class="ms">性别</th>
+                        <th class="ms">年龄</th>
+                        <th class="ml">电话</th>
+                        <th class="ml">操作码</th>
+                        <th class="ml">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                    </tr>
+                </tbody> -->
+                </table>
+                <div class="team_b">
+                    <span>前往第<input oninput="changepage()" class="page" autocomplete="off" value="1" min="1" max="10" style="height: 22px;width: 35px;margin: 0;" type="number" name="page">页</span>
+                    <a href="javascript:;"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                    <a href="javascript:;" style="background-color:#1890FF;color: white;">1</a>
+                    <a href="javascript:;"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+                    <span id="page_number">共0个用户</span>
+                </div>
+            </div>
+            <div class="functions" id="food" style="display:none">
+                <div class="food_fade">
+                    <button class="fade">×</button>
+                    <div id="food_add">
+                        <span style="color: #1890FF;font-size: 20px;font-weight: 500;">菜品添加栏目</span>
+                        <div id="input_land">
+                            菜品名：<input type="text" class="food_add_input" placeholder="请输入您要添加的菜品名"></br>
+                            价格：<input style="margin-left: 14px;" type="text" class="food_add_input" placeholder="请输入您要添加的价格"></br>
+                            描述：<input type="text" style="margin-left: 14px;" class="food_add_input" placeholder="请输入您要添加的描述"></br>
+                                
+                            类型名称：<input type="text" class="food_add_input" placeholder="请输入您要添加的类型名称"></br>
+                            类型：<input type="radio" style="margin-left: 14px;" class="food_add_type" name="food_add_type" value="面">面
+                            <input type="radio" class="food_add_type" name="food_add_type" value="米">米
+                            <input type="radio" class="food_add_type" name="food_add_type" value="饮品">饮品
+                            <input type="radio" class="food_add_type" name="food_add_type" value="水果">水果
+                        </div>
+                        <button id="food_add_b">添加</button>
+                    </div>
+                </div>
+                <div class="food_fade">
+                    <button class="fade">×</button>
+                    <div id="food_revise">
+                        <span style="color: #1890FF;font-size: 20px;font-weight: 500;">菜品修改栏目</span>
+                        <div id="input_land">
+                            菜品名：<input type="text" class="food_reivse_input" placeholder="请输入您要修改的菜品名"></br>
+                            价格：<input style="margin-left: 14px;" type="text" class="food_reivse_input" placeholder="请输入您要修改的价格"></br>
+                            描述：<input type="text" style="margin-left: 14px;" class="food_reivse_input" placeholder="请输入您要修改的描述"></br>
+                                
+                            类型名称：<input type="text" class="food_reivse_input" placeholder="请输入您要修改的类型名称"></br>
+                            类型：<input type="radio" style="margin-left: 14px;" class="food_sex" name="food_type" value="面">面
+                            <input type="radio" class="food_sex" name="food_type" value="米">米
+                            <input type="radio" class="food_sex" name="food_type" value="饮品">饮品
+                            <input type="radio" class="food_sex" name="food_type" value="水果">水果
+
+                        </div>
+                        <button id="food_revise_b">修改</button>
+                    </div>
+                </div>
+                <div class="food_top">
+                    <button class="food_t_b" id="food_addf"><i class="fa fa-plus-square-o" aria-hidden="true"></i>添加菜品</button>
+                    <button class="food_t_b" id="food_delete"><i class="fa fa-minus-square-o" aria-hidden="true"></i>批量删除</button>
+                    <div>
+                        <input type="text" class="food_find_input" placeholder=" 请输入您要寻找的食物名与描述">
+                        <a href="javascript:;" class="food_find_bon" onclick="foodfind()"><i class="fa fa-search" aria-hidden="true"></i>搜索</a>
+                    </div>
+                </div>
+                <table class="food_main">
+
+                </table>
+                <div class="food_b">
+                    <span>前往第<input oninput="fchangepage()" class="page"  value="1" min="1" max="20" style="height: 22px;width: 35px;margin: 0;" type="number" name="page">页</span>
+                    <a href="javascript:;"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                    <a href="javascript:;" style="background-color:#1890FF;color: white;">1</a>
+                    <a href="javascript:;"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+                    <span id="fpage_number">共0个菜品</span>
+                </div>
+            </div>
+            <div class="functions" id="begin" style="display:none">
+                开发中......
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../jquery-3.6.0.js"></script>
+<script src="js/top.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/landget.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/food.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/team.js" type="text/javascript" charset="utf-8"></script>
+</html>

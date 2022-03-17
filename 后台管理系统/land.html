@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/land.css" type="text/css">
+    <title>登录</title>
+</head>
+<body>
+    <div class="main">
+        <img src="img/top.png" class="land_top">
+        <div id="land_main">
+            <h3>欢迎登陆:</h3>
+            <div id="input_land">
+                <input type="text" id="land_id" placeholder="请输入您的用户名">
+                <input type="text" id="land_password" placeholder="请输入您的密码">
+            </div>
+            <a href="javscript:;" id="to_register">没有账号？点击注册</a>
+            <a href="javscript:;" id="to_code">忘记密码？邮箱验证</a>
+            <button id="land">登陆</button>
+        </div>
+        <div id="land_code_main" style="display: none;">
+            <h3>欢迎登陆:</h3>
+            <div id="input_land">
+                <input type="text" id="code_mail" placeholder="请输入您的邮箱">
+                <input type="text" id="code_password" placeholder="请输入您获取的验证码"><button id="landcode">发送验证码</button>
+            </div>
+            <a href="javscript:;" class="to_land">已有账号？点击登陆</a>
+            <button id="code_load">账号</button>
+        </div>
+        <div id="register_main" style="display: none;">
+            <h3>欢迎注册:</h3>
+            <div id="input_land">
+                <input type="text" class="registerinput" placeholder="请输入您要注册的用户名">
+                <input type="text" class="registerinput" placeholder="请输入您要设置的密码">
+                <input type="text" class="registerinput" id="register_mail" placeholder="请输入您的邮箱"><button id="passcode">发送验证码</button>
+                <input type="text" class="registerinput" placeholder="请输入您获取的验证码">
+            </div>
+            <a href="javscript:;" class="to_land">已有账号？点击登陆</a>
+            <button id="register">注册</button>
+        </div>
+    </div>
+</body>
+<script src="../jquery-3.6.0.js"></script>
+<script src="js/land.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/register.js" type="text/javascript" charset="utf-8"></script>
+</html>
