@@ -39,8 +39,8 @@ function fooddeletef(){
 }
 fooddelete.onmousemove=function(){
     let c=false;
-    for(let i in fteama){
-        if(fteama[i].checked){
+    for(let i of fteama){
+        if(i.checked){
             c=true;
         }
     }
@@ -59,11 +59,11 @@ function fr(){
     let fteamd=document.getElementsByClassName("food_delete");
     let ftri=document.getElementsByClassName("food_reivse_input");
     let fts=document.getElementsByName("food_type");
-    for(let n in fteamd){
-        fteamd[n].onclick=function(){
-            let us=fteamd[n].parentNode.parentNode.children[1].innerHTML;
+    for(let n of fteamd){
+        n.onclick=function(){
+            let us=n.parentNode.parentNode.children[1].innerHTML;
             let choose=confirm("你是否确定删除" + us + "的信息?");
-            let id=fteamd[n].parentNode.parentNode.children[6].innerHTML;
+            let id=n.parentNode.parentNode.children[6].innerHTML;
             if (choose == true) {
                 $.post('http://118.195.129.130:3000/food/del',{"_id":id},
                 function(date){
@@ -176,14 +176,14 @@ function fchangepage(){
             "<a class='fmd food_delete' href='javascript:;'><i class='fa fa-minus-square-o' aria-hidden='true'></i>删除</a></td></tr>";
             let ms=document.getElementsByClassName("fms");
             let ml=document.getElementsByClassName("fml");
-            for(let i in ms){
-                if(ms[i].innerHTML=="null"||ms[i].innerHTML=="undefined"){
-                    ms[i].innerHTML=" ";
+            for(let i of ms){
+                if(i.innerHTML=="null"||i.innerHTML=="undefined"){
+                    i.innerHTML=" ";
                 }
             }
             for(let i in ml){
-                if(ml[i].innerHTML=="null"||ml[i].innerHTML=="undefined"){
-                    ml[i].innerHTML=" ";
+                if(i.innerHTML=="null"||i.innerHTML=="undefined"){
+                    i.innerHTML=" ";
                 }
             }
         }
@@ -212,8 +212,8 @@ $("#food_add_b").click(function(){
     function(date){
         alert(date.msg);
         if(date.msg=="添加成功"){
-            for(let n in input){
-                input[n].value="";
+            for(let n of input){
+                n.value="";
             }
             fchangepage();
         }
@@ -222,13 +222,13 @@ $("#food_add_b").click(function(){
 function ss(){
     var foodall=document.getElementsByName("food_all")[0];
     if(foodall.checked){
-        for(let n in fteama){
-            fteama[n].checked=true;
+        for(let n of fteama){
+           n.checked=true;
         }
     }
     else if(foodall.checked==false){
-        for(let n in fteama){
-            fteama[n].checked=false;
+        for(let n of fteama){
+            n.checked=false;
         }
     }
 }

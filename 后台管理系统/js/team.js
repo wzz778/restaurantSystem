@@ -37,8 +37,8 @@ function teamdeletef(){
 //批量删除
 teamdelete.onmousemove=function(){
     let c=false;
-    for(let i in teama){
-        if(teama[i].checked){
+    for(let i of teama){
+        if(i.checked){
             c=true;
         }
     }
@@ -58,11 +58,11 @@ function r(){
     let teamd=document.getElementsByClassName("team_delete");
     let tri=document.getElementsByClassName("team_reivse_input");
     let ts=document.getElementsByName("team_sex");
-    for(let n in teamd){
-        teamd[n].onclick=function(){
-            let us=teamd[n].parentNode.parentNode.children[1].innerHTML;
+    for(let n of teamd){
+        n.onclick=function(){
+            let us=n.parentNode.parentNode.children[1].innerHTML;
             let choose=confirm("你是否确定删除" + us + "的信息?");
-            let id=teamd[n].parentNode.parentNode.children[5].innerHTML;
+            let id=n.parentNode.parentNode.children[5].innerHTML;
             if (choose == true) {
                 $.post('http://118.195.129.130:3000/users/del_users',{"_id":id},
                 function(date){
@@ -152,14 +152,14 @@ function changepage(){
             "<a class='md team_delete' href='javascript:;'><i class='fa fa-minus-square-o' aria-hidden='true'></i>删除</a></td></tr>";
             let ms=document.getElementsByClassName("ms");
             let ml=document.getElementsByClassName("ml");
-            for(let i in ms){
-                if(ms[i].innerHTML=="null"||ms[i].innerHTML=="undefined"){
-                    ms[i].innerHTML=" ";
+            for(let i of ms){
+                if(i.innerHTML=="null"||i.innerHTML=="undefined"){
+                    i.innerHTML=" ";
                 }
             }
-            for(let i in ml){
-                if(ml[i].innerHTML=="null"||ml[i].innerHTML=="undefined"){
-                    ml[i].innerHTML=" ";
+            for(let i of ml){
+                if(i.innerHTML=="null"||i.innerHTML=="undefined"){
+                    i.innerHTML=" ";
                 }
             }
         }
@@ -182,8 +182,8 @@ $("#add_number").click(function(){
     function(date){
         if(date.msg=="注册成功"){
             alert("添加成功!");
-            for(let n in input){
-                input[n].value="";
+            for(let n of input){
+               n.value="";
             }
             changepage();
         }
@@ -201,13 +201,13 @@ $("#passcode_number").click(()=>{
 function s(){
     const teamall=document.getElementsByName("team_all")[0];
     if(teamall.checked){
-        for(let n=0;n<teama.length;n++){
-            teama[n].checked=true;
+        for(let n of teama){
+            n.checked=true;
         }
     }
     else if(teamall.checked==false){
-        for(let n=0;n<teama.length;n++){
-            teama[n].checked=false;
+        for(let n of teama){
+            n.checked=false;
         }
     }
 }
