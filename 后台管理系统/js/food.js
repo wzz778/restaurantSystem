@@ -127,7 +127,7 @@ function fchangepage(){
     fa[1].innerHTML=p;
     $.get('http://118.195.129.130:3000/food/allpage',{"Null":0},
         function(date){
-        let pagen=parseInt(date.pages/10)+1;
+        let pagen=date.pages%10!=0?parseInt(date.pages/10)+1:parseInt(date.pages/10);
         if(p>pagen||p<=0&&p!=""){
             alert("请输入合理的页数！");
         }

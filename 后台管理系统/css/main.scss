@@ -90,7 +90,7 @@ $bluecolor: #1890FF;
             position: absolute;
             z-index: 1000;
             top: 5px;
-           right: 10px;
+           right: 15px;
             color: white;
             font-size: 20px;
             &:hover{
@@ -142,6 +142,7 @@ $bluecolor: #1890FF;
     background-color: white;
     height: 95vh;
     transition:.3s;
+    overflow: auto;
 }
 #me{
     width: 95%;
@@ -288,11 +289,16 @@ $bluecolor: #1890FF;
 #team{
     width: 95%;
     background-color: white;
-    padding: 25px;
+    padding-top: 25px;
     .team_top{
         width: 100%;
+        padding:15px 25px;
         height: 40px;
         display: flex;
+        top: 30px;
+        position: fixed;
+        background-color: white;
+        border-bottom: solid 2px #1890FF;
         i{
             padding-right: 5px;
         }
@@ -347,8 +353,9 @@ $bluecolor: #1890FF;
         }
     }
     .team_main{
-        margin-top: 10px;
-        width: 98%;
+        margin-top: 50px;
+        margin-left: 25px;
+        width: 100%;
         font-size: 15px;
         tr{
             padding: 10px;
@@ -552,11 +559,16 @@ $bluecolor: #1890FF;
 #food{
     width: 95%;
     background-color: white;
-    padding: 25px;
+    padding-top: 25px;
     .food_top{
         width: 100%;
         height: 40px;
+        padding:15px 25px;
         display: flex;
+        position: fixed;
+        top: 30px;
+        background-color: white;
+        border-bottom: solid 2px #1890FF;
         i{
             padding-right: 5px;
         }
@@ -611,7 +623,8 @@ $bluecolor: #1890FF;
         }
     }
     .food_main{
-        margin-top: 10px;
+        margin-top: 50px;
+        margin-left: 25px;
         width: 98%;
         font-size: 15px;
         tr{
